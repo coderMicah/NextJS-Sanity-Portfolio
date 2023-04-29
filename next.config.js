@@ -3,6 +3,15 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'cdn.sanity.io',
+      },
+    ],
+  },
 }
+
+
 
 module.exports = nextConfig
