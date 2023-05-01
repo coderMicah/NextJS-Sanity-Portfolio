@@ -5,8 +5,6 @@ import { NextResponse } from "next/server";
 const query = groq`*[_type == "project"]{
   ...,
   "technologies": technologies[]->{
-    title,
-    description,
     "image": image.asset->url
   }
 }`
