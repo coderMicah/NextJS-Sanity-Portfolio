@@ -1,3 +1,4 @@
+
 //components
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -17,7 +18,7 @@ import {
 } from "@/utilis/helper";
 
 //revalidate the page after 60 sec
-export const revalidate = 10;
+// export const revalidate = 10;
 
 export default async function Home() {
   const socials = await fetchSocials();
@@ -26,9 +27,10 @@ export default async function Home() {
   const skills = await fetchSkills();
   const projects = await fetchProjects();
 
+
   return (
     <>
-      <Header socials={socials} />
+      <Header socials={socials} /> 
       <main className="snap-y snap-mandatory overflow-hidden z-0 scrollbar scrollbar-track-400/20">
         <section id="hero" className="snap-start">
           <Hero pageInfo={pageInfo} />
@@ -57,15 +59,15 @@ export default async function Home() {
        </div>
 
         <footer className="h-[30vh] w-full cursor-pointer">
-          {/* <div className="flex justify-center items-center">
-            <img
+          <div className="flex justify-center items-center">
+            {/* <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0"
               src="https://i.imgur.com/e2yvD6A.png"
               alt=""
-            />
-          </div> */}
+            /> */}
+          </div>
         </footer>
-      </main>
+      </main> 
     </>
   );
 }

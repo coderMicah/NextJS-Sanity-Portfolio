@@ -3,7 +3,7 @@ import { urlFor } from "@/sanity";
 import { motion } from "framer-motion";
 
 const Projects = ({ projects }) => {
-  console.log(projects?.technologies);
+ 
   // const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = ({pageInfo}) => {
-  console.log(urlFor(pageInfo?.heroImage).url());
+
   const [text, count] = useTypewriter({
     words: [
       // `Hi The Name's ${pageInfo?.name}`,

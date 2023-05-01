@@ -4,8 +4,12 @@ import { NextResponse } from "next/server";
 
 const query = groq`*[_type == "project"]{
   ...,
-  technologies[]->
-}`;
+  "technologies": technologies[]->{
+    title,
+    description,
+    "image": image.asset->url
+  }
+}`
 
 export async function GET() {
   const projects = await sanityClient.fetch(query);
