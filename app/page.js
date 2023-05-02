@@ -1,12 +1,12 @@
 
 //components
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experiences from "./components/Experiences";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Experiences from "@/components/Experiences";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 //helper fn
 import {
@@ -18,7 +18,7 @@ import {
 } from "@/utilis/helper";
 
 //revalidate the page after 60 sec
-// export const revalidate = 10;
+export const revalidate = 10;
 
 export default async function Home() {
   const socials = await fetchSocials();
@@ -48,9 +48,9 @@ export default async function Home() {
           <Skills skills={skills} />
         </section>
 
-        {/* <section id="projects" className="snap-start">
+        <section id="projects" className="snap-start">
           <Projects projects={projects} />
-        </section> */}
+        </section>
 
        <div className="h-screen mb-10">
        <section id="contact" className="snap-start">
